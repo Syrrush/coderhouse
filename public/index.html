@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"
+        integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
+    <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilos.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+</head>
+
+<body>
+    <div class="container mt-3">
+        <div class="jumbotron">
+            <h1> Ingresar producto</h1>
+            <br>
+            <form id="formProductos">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" class="form-control" name="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="precio">Precio</label>
+                    <input type="number" id="precio" class="form-control" name="price" required>
+                </div>
+                <button class="btn btn-success mt-3">Enviar</button>
+            </form>
+            <br>
+            <div id="productos"></div>
+        </div>
+
+        <div class="jumbotron">
+            <h1>Whatsapp fake</h1>
+            <br>
+            <input type="text" id="inputUsuario" class="form-control w-50 my-2 mr-2" placeholder="identifícate">
+
+            <div id="mensajes"></div>
+
+            <form id="formDelMensaje" class="fomr-inline" autocomplete="off">
+                <div class="form-group">
+                    <input disabled id="inputMensaje" type="text" class="form-control my-2 mr-2"
+                        placeholder="Pone tu mensajito">
+                    <button disabled id="btnEnviar" type="submit" class="btn btn-primary my-2">Enviar</button>
+
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
